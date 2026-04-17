@@ -37,7 +37,9 @@ function setActiveTab(type) {
 document.addEventListener("DOMContentLoaded", () => {
   saldoBtn?.addEventListener("click", () => setActiveTab("saldo"));
   inputBtn?.addEventListener("click", () => setActiveTab("input"));
+  if (window.location.pathname.includes("dashboard")) {
   setActiveTab("saldo");
+}
 });
 
 
