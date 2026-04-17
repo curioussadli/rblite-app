@@ -50,27 +50,47 @@ let produkData = {};
 let draftData = {};
 let activeCardId = null;
 
+
+
+let unsubProduk = null;
+let unsubDraft = null;
+
 // =========================
 // LOAD PRODUK
 // =========================
-onSnapshot(collection(db, "produk"), (snapshot) => {
-  produkData = {};
-  snapshot.forEach((d) => {
-    produkData[d.id] = d.data();
+function loadProduk() {
+  if (unsubProduk) unsubProduk();
+
+  unsubProduk = onSnapshot(collection(db, "produk"), (snapshot) => {
+    produkData = {};
+
+    snapshot.forEach((d) => {
+      produkData[d.id] = d.data();
+    });
+
+    renderAll();
   });
-  renderAll();
-});
+}
 
 // =========================
 // LOAD DRAFT
 // =========================
-onSnapshot(collection(db, "stok_draft"), (snapshot) => {
-  draftData = {};
-  snapshot.forEach((d) => {
-    draftData[d.id] = d.data();
+function loadDraft() {
+  if (unsubDraft) unsubDraft();
+
+  unsubDraft = onSnapshot(collection(db, "stok_draft"), (snapshot) => {
+    draftData = {};
+
+    snapshot.forEach((d) => {
+      draftData[d.id] = d.data();
+    });
+
+    renderAll();
   });
-  renderAll();
-});
+}
+
+loadProduk();
+loadDraft();
 
 // =========================
 // RENDER ALL
