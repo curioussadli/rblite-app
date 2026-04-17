@@ -1,0 +1,594 @@
+
+/* =========================
+   📄 PAGE WRAPPER
+========================= */
+.dashboard-page {
+  padding-top: 60px; /* ruang untuk topbar */
+}
+
+
+/* =========================
+   📱 MAIN CONTENT AREA
+========================= */
+.dashboard-main {
+  flex: 1;
+  width: 100%;
+  padding: 8px 22px 100px; /* ruang bottom nav */
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+/* sembunyikan scrollbar */
+.dashboard-main::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
+/* =========================
+   TOGGLE BUTTON
+========================= */
+.toggle-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.toggle-btn {
+  flex: 1;
+  height: 46px;
+  border-radius: 5px;
+  border: 1px solid #d7d7d7;
+  background: rgba(255, 255, 255, 0.72);
+  color: #7d7d7d;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.toggle-btn:active {
+  transform: scale(0.98);
+}
+
+.toggle-btn.active {
+  background: #ffc400;
+  border-color: #ffc400;
+  color: rgb(4, 4, 4);
+
+}
+
+
+
+
+/* =========================
+   📊 SUMMARY CARD
+========================= */
+.summary-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 5px;
+  padding: 22px 18px;
+  margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   📊 SUMMARY ITEM
+========================= */
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-label {
+  font-size: 13px;
+  color: #8a8a8a;
+  margin-bottom: 6px;
+}
+
+
+/* =========================
+   💰 SALDO AKHIR
+========================= */
+.summary-item.akhir .amount {
+  font-size: 35px;
+  font-weight: 700;
+  color: #2ea44f;
+  text-align: right;
+}
+
+
+/* =========================
+   💰 SALDO AWAL
+========================= */
+.summary-item.awal .amount {
+  font-size: 35px;
+  font-weight: 700;
+  color: #888;
+  text-align: right;
+}
+
+
+/* =========================
+   📊 MINI BOX ROW
+========================= */
+.summary-row {
+  display: flex;
+  gap: 12px;
+}
+
+
+/* =========================
+   📦 MINI BOX CARD (UPGRADE VISUAL)
+========================= */
+.mini-box {
+  flex: 1;
+  border-radius: 5px;
+  padding: 16px 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  margin-bottom: 18px;
+
+  /* 🔥 upgrade visual */
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+
+/* 💚 pemasukan card */
+.pemasukan {
+  background: rgba(46, 164, 79, 0.1);
+}
+
+
+/* ❤️ pengeluaran card */
+.pengeluaran {
+  background: rgba(255, 99, 99, 0.1);
+}
+
+
+/* label kecil */
+.mini-label {
+  font-size: 13px;
+  color: #777;
+}
+
+
+/* value angka */
+.mini-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+
+
+/* =========================
+   💱 CURRENCY STYLE
+========================= */
+.currency {
+  font-weight: 400;
+  color: #999;
+}
+
+
+/* angka utama */
+.mini-value .amount {
+  font-weight: 700;
+  color: #202020;
+  text-align: right;
+}
+
+
+/* =========================
+   📈 LIST PENDAPATAN
+========================= */
+.pendapatan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+
+/* item row */
+.pendapatan-item {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 5px;
+  padding: 16px 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* text kiri */
+.pendapatan-item span {
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* angka kanan */
+.pendapatan-item strong {
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* =========================
+   🧾 INPUT GROUP
+========================= */
+.input-group {
+  margin-bottom: 18px;
+}
+
+
+/* label input */
+.input-label {
+  display: block;
+  font-size: 14px;
+  color: #7d7d7d;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+
+/* wrapper input */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+
+  background: rgba(255,255,255,0.94);
+  border-radius: 5px;
+  padding: 14px 16px;
+}
+
+
+/* Rp label */
+.input-wrapper .currency {
+  font-size: 16px;
+  color: #999;
+  margin-right: 6px;
+}
+
+
+/* input field */
+.input-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+
+  font-size: 18px;
+  font-weight: 600;
+  color: #202020;
+
+  background: transparent;
+}
+
+
+/* placeholder */
+.input-wrapper input::placeholder {
+  color: #bbb;
+}
+
+
+/* focus effect */
+.input-wrapper:focus-within {
+  border: 1px solid #525252;
+}
+
+
+/* =========================
+   🔘 BUTTON SIMPAN
+========================= */
+.primary-btn {
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+
+  background: #cdcccc;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  margin-bottom: 24px;
+}
+
+
+/* klik effect */
+.primary-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* hover */
+.primary-btn:hover {
+  background: #ffc400;
+}
+
+
+/* =========================
+   📝 EMPTY CARD
+========================= */
+.empty-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 5px;
+  padding: 24px 20px;
+  margin-bottom: 90px;
+}
+
+
+/* title */
+.empty-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+
+/* text */
+.empty-card p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   📱 RESPONSIVE MOBILE
+========================= */
+@media (max-width: 390px) {
+
+  .dashboard-main {
+    padding: 8px 22px 120px;
+  }
+
+  .mini-value {
+    font-size: 16px;
+  }
+}
+
+
+
+/* =========================
+   LAPORAN LIST
+========================= */
+#laporanList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* CARD */
+.laporan-item {
+  background: #fff;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+/* HEADER */
+.laporan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.laporan-date {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ROW */
+.laporan-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+
+/* =========================
+   📄 LAPORAN LIST
+========================= */
+#laporanList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+/* =========================
+   📦 CARD
+========================= */
+.laporan-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px 14px 12px;
+}
+
+/* =========================
+   🧾 HEADER (TANGGAL + DELETE)
+========================= */
+.laporan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.laporan-date {
+  font-size: 15px;       /* 🔥 lebih besar */
+  font-weight: 700;
+  color: #222;
+}
+
+/* =========================
+   ❌ DELETE
+========================= */
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn img {
+  width: 16px;
+  height: 16px;
+
+  /* 🔥 merah */
+  filter: invert(32%) sepia(96%) saturate(3000%)
+          hue-rotate(345deg) brightness(95%) contrast(95%);
+}
+
+/* =========================
+   📊 BODY
+========================= */
+.laporan-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* baris item */
+.laporan-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 14px;
+  color: #333;
+}
+
+/* kiri */
+.laporan-row span:first-child {
+  color: #777;
+  font-weight: 500;
+}
+
+/* kanan (angka) */
+.laporan-row span:last-child {
+  font-weight: 700;
+  color: #111;
+}
+
+/* =========================
+   🎯 SELISIH WARNA
+========================= */
+.laporan-row:last-child span:last-child {
+  font-weight: 700;
+}
+
+
+.chart-card {
+  background: #fff;
+  border-radius: 5px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+
+
+
+.rekap-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 20px; /* 🔥 tambahin ini */
+}
+
+.rekap-card {
+  flex: 1;
+  background: white;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.rekap-card h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.rekap-card p {
+  display: flex;
+  justify-content: space-between; /* kiri & kanan */
+  align-items: center;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.rekap-card span {
+  font-weight: 600;
+  text-align: right;
+}
+
+#mingguMasuk,
+#bulanMasuk {
+  color: #2ea44f; /* hijau */
+}
+
+#mingguKeluar,
+#bulanKeluar {
+  color: #e74c3c; /* merah */
+}
+
+
+
+#toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #111;
+  color: #fff;
+
+  padding: 10px 14px;
+
+  border-radius: 999px; /* 🔥 ini bikin bulat kapsul */
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.25s ease;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
+  top: 40px;
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-text {
+  white-space: nowrap;
+}

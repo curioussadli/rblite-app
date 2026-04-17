@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <title>Transaksi</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/transaksi.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="phone-shell">
+    <section class="app-screen">
+
+
+      <!-- =========================
+      MAIN CONTENT
+      ========================= -->
+      <section class="transaksi-main">
+
+        <!-- HEADER -->
+        <div class="transaksi-page">
+          <div class="topbar">
+            <h2 class="topbar-title">Transaksi</h2>
+
+        <div class="filter-wrapper">
+
+          <button id="filterBtn" class="filter-btn">
+            <img src="assets/icons/icon-filter.svg" alt="filter">
+          </button>
+
+          <input type="date" id="filterTanggal" class="date-overlay">
+
+        </div>
+
+          </div>
+        </div>
+
+        <!-- =========================
+        INPUT
+        ========================= -->
+        <div class="input-group">
+          <label class="input-label">Nominal (Rp)</label>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="saldoAwalInput"
+              placeholder="Contoh: 20.000"
+              inputmode="numeric"
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Keterangan</label>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="keteranganInput" 
+              placeholder="Contoh: Uang Makan"
+            />
+          </div>
+        </div>
+
+        <!-- BUTTON -->
+        <button id="saveSaldoBtn" class="primary-btn">
+          Simpan
+        </button>
+
+        <!-- =========================
+        LIST KELUAR
+        ========================= -->
+        <div class="rincian-wrapper">
+
+          <div id="transaksiKeluar" class="rincian-list"></div>
+        </div>
+
+      </section>
+
+      <!-- =========================
+      BOTTOM NAV
+      ========================= -->
+      <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-saldo.svg">
+          </div>
+          <span>Saldo</span>
+        </a>
+
+        <a href="stok.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-stok.svg">
+          </div>
+          <span>Stok</span>
+        </a>
+
+        <a href="menu.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-menu.svg">
+          </div>
+          <span>Menu</span>
+        </a>
+
+        <a href="riwayat-pesanan.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-pesanan.svg">
+          </div>
+          <span>Riwayat</span>
+        </a>
+
+        <a href="transaksi.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-laporan.svg">
+          </div>
+          <span>Transaksi</span>
+        </a>
+      </nav>
+
+    </section>
+  </main>
+
+  <!-- LOGIN CHECK -->
+  <script>
+    const isLogin = localStorage.getItem("login");
+    if (!isLogin) {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <!-- JS -->
+  <script src="js/transaksi.js" type="module"></script>
+
+</body>
+</html>

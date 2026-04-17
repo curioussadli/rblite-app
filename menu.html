@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Responsive untuk HP (POS mobile friendly) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+  <title>Menu POS</title>
+
+  <!-- ================= CSS GLOBAL ================= -->
+  <link rel="stylesheet" href="css/main.css">        <!-- layout utama -->
+  <link rel="stylesheet" href="css/components.css">  <!-- tombol, card, dll -->
+  <link rel="stylesheet" href="css/menu.css">        <!-- khusus halaman menu -->
+
+  <!-- ================= FONT ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ================= WRAPPER APLIKASI ================= -->
+  <main class="phone-shell">
+    <section class="app-screen">
+
+      <!-- ===================================================== -->
+      <!-- 🔝 HEADER (TITLE HALAMAN MENU) -->
+
+      <!-- Dashboard Content -->
+      <section class="menu-main">
+
+        <!-- Header -->
+        <div class="menu-page">
+
+          <!-- TOP NAVBAR -->
+          <div class="topbar">
+
+                      <!-- 🔙 BACK BUTTON -->
+          <button class="topbar-btn" id="backBtn">
+            <img src="assets/icons/icon-back.svg" alt="back">
+          </button>
+
+            <h2 class="topbar-title">Menu</h2>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- 🔥 INI CONTAINER DINAMIS MENU -->
+        <!-- isi akan di-render otomatis oleh menu.js dari Firebase -->
+        <div id="posMenu" class="menu-grid"></div>
+
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- 🛒 CART BAR (TOTAL BELANJA SEMENTARA) -->
+      <!-- ===================================================== -->
+      <section class="cart-wrapper">
+
+        <!-- tampil jumlah item + total harga -->
+        <div id="cartBottomBar" class="cart-bottom-bar">
+
+          <!-- jumlah item di cart -->
+          <span id="cartCount">0 item</span>
+
+          <!-- total harga semua item -->
+          <span id="cartBottomTotal">Rp 0</span>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================== -->
+      <!-- 🔻 BOTTOM NAVIGATION (MENU APLIKASI) -->
+      <!-- ===================================================== -->
+      <nav class="bottom-nav">
+
+        <!-- Dashboard / Saldo -->
+        <a href="dashboard.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-saldo.svg" alt="Saldo">
+          </div>
+          <span>Saldo</span>
+        </a>
+
+        <!-- Stok -->
+        <a href="stok.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-stok.svg" alt="Stok">
+          </div>
+          <span>Stok</span>
+        </a>
+
+        <!-- Menu (aktif sekarang) -->
+        <a href="menu.html" class="nav-item active">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-menu.svg" alt="Menu">
+          </div>
+          <span>Menu</span>
+        </a>
+
+        <!-- Transaksi -->
+        <a href="riwayat-pesanan.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-pesanan.svg">
+          </div>
+          <span>Riwayat</span>
+        </a>
+
+        <a href="transaksi.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-laporan.svg">
+          </div>
+          <span>Transaksi</span>
+        </a>
+
+      </nav>
+
+    </section>
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- 🚀 MAIN SCRIPT MENU -->
+  <!-- pakai type="module" karena pakai Firebase import/export -->
+  <!-- ===================================================== -->
+  <script type="module" src="js/menu.js"></script>
+
+</body>
+</html>

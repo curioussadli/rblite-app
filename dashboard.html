@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- 📱 RESPONSIVE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <title>Dashboard</title>
+
+  <!-- 🎨 STYLE -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- 🔤 FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<div id="toast"></div>
+
+<main class="phone-shell">
+<section class="app-screen">
+
+<!-- =====================================================
+     📊 DASHBOARD
+===================================================== -->
+<section class="dashboard-main">
+
+  <!-- ================= TOPBAR ================= -->
+  <div class="dashboard-page">
+    <div class="topbar">
+      <h2 class="topbar-title">Dashboard</h2>
+    </div>
+  </div>
+
+  <!-- ================= TAB ================= -->
+  <div class="toggle-wrapper">
+    <button id="saldoBtn" class="toggle-btn active">Saldo</button>
+    <button id="inputBtn" class="toggle-btn">Input</button>
+  </div>
+
+  <!-- =====================================================
+       💰 TAB: SALDO
+  ===================================================== -->
+  <div id="saldoContent">
+
+    <!-- 🔥 SALDO -->
+    <div class="summary-card">
+
+      <div class="summary-item akhir">
+        <span class="summary-label">Saldo Akhir (Rp)</span>
+        <span class="summary-value">
+          <span id="saldoAkhir" class="amount">0</span>
+        </span>
+      </div>
+
+      <div class="summary-item awal">
+        <span class="summary-label">Saldo Awal (Rp)</span>
+        <span class="summary-value">
+          <span id="saldoAwal" class="amount">0</span>
+        </span>
+      </div>
+
+    </div>
+
+    <!-- 💰 PEMASUKAN / PENGELUARAN -->
+    <div class="summary-row">
+
+      <div class="mini-box pemasukan">
+        <span class="mini-label">Pemasukan</span>
+        <span class="mini-value">
+          Rp <span id="pemasukanValue">0</span>
+        </span>
+      </div>
+
+      <div class="mini-box pengeluaran">
+        <span class="mini-label">Pengeluaran</span>
+        <span class="mini-value">
+          Rp <span id="pengeluaranValue">0</span>
+        </span>
+      </div>
+
+    </div>
+
+    <!-- 📊 HASIL -->
+    <div class="pendapatan-list">
+
+      <div class="pendapatan-item">
+        <span>Pendapatan</span>
+        <strong id="pendapatan">Rp 0</strong>
+      </div>
+
+      <div class="pendapatan-item">
+        <span>Selisih +/-</span>
+        <strong id="selisih">Rp 0</strong>
+      </div>
+
+    </div>
+
+    <!-- 📤 BUTTON -->
+    <button id="kirimLaporanBtn" class="primary-btn">
+      Kirim Laporan Harian
+    </button>
+
+
+    <div class="chart-card">
+      <canvas id="chartKeuangan"></canvas>
+    </div>
+
+    <div class="rekap-wrapper">
+
+      <div class="rekap-card">
+        <h3>Minggu Ini</h3>
+        <p>Pemasukan: <span id="mingguMasuk">Rp 0</span></p>
+        <p>Pengeluaran: <span id="mingguKeluar">Rp 0</span></p>
+      </div>
+
+      <div class="rekap-card">
+        <h3>Bulan Ini</h3>
+        <p>Pemasukan: <span id="bulanMasuk">Rp 0</span></p>
+        <p>Pengeluaran: <span id="bulanKeluar">Rp 0</span></p>
+      </div>
+
+    </div>
+
+    <!-- INFO -->
+    <div class="empty-card">
+      <h3>Keterangan</h3>
+      <p>Data dihitung otomatis berdasarkan transaksi hari ini.</p>
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       📝 TAB: INPUT
+  ===================================================== -->
+  <div id="inputContent" style="display:none;">
+
+    <!-- SALDO AWAL -->
+    <div class="input-group">
+      <label class="input-label">Saldo Awal</label>
+      <div class="input-wrapper">
+        <span class="currency">Rp</span>
+        <input type="text" id="saldoAwalInput" placeholder="0" inputmode="numeric" />
+      </div>
+    </div>
+
+    <!--    <button id="saveSaldoBtn" class="primary-btn">
+      Simpan Saldo Awal
+    </button>  -->
+
+    <!-- SALDO AKHIR -->
+    <div class="input-group">
+      <label class="input-label">Saldo Akhir</label>
+      <div class="input-wrapper">
+        <span class="currency">Rp</span>
+        <input type="text" id="saldoAkhirInput" placeholder="0" inputmode="numeric" />
+      </div>
+    </div>
+
+    <button id="saveSaldoAkhirBtn" class="primary-btn">
+      Simpan Saldo Akhir
+    </button>
+
+    <!-- INFO -->
+    <div class="empty-card">
+      <h3>Keterangan</h3>
+      <p>Laporan akan tersimpan ke Firebase.</p>
+    </div>
+
+    <!-- LIST LAPORAN -->
+    <div id="laporanList"></div>
+
+  </div>
+
+</section>
+
+<!-- =====================================================
+     📱 BOTTOM NAV
+===================================================== -->
+<nav class="bottom-nav">
+
+  <a href="dashboard.html" class="nav-item active">
+    <div class="nav-icon">
+      <img src="assets/icons/icon-saldo.svg">
+    </div>
+    <span>Saldo</span>
+  </a>
+
+  <a href="stok.html" class="nav-item">
+    <div class="nav-icon">
+      <img src="assets/icons/icon-stok.svg">
+    </div>
+    <span>Stok</span>
+  </a>
+
+  <a href="menu.html" class="nav-item">
+    <div class="nav-icon">
+      <img src="assets/icons/icon-menu.svg">
+    </div>
+    <span>Menu</span>
+  </a>
+
+  <a href="riwayat-pesanan.html" class="nav-item">
+    <div class="nav-icon">
+      <img src="assets/icons/icon-pesanan.svg">
+    </div>
+    <span>Riwayat</span>
+  </a>
+
+  <a href="transaksi.html" class="nav-item">
+    <div class="nav-icon">
+      <img src="assets/icons/icon-laporan.svg">
+    </div>
+    <span>Transaksi</span>
+  </a>
+
+</nav>
+
+</section>
+</main>
+
+<!-- JS -->
+<script type="module" src="js/dashboard.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

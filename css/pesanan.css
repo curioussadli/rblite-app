@@ -1,0 +1,206 @@
+/* =========================
+   PAGE WRAPPER
+========================= */
+.pesanan-page {
+  padding-top: 80px; /* space untuk topbar */
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.pesanan-main {
+  flex: 1;
+  width: 100%;
+  padding: 8px 22px 100px; /* bawah untuk bottom nav */
+  overflow-y: auto;
+  margin-top: 90px;
+}
+
+.pesanan-main::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+body {
+  background: #f5f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   LIST PESANAN
+========================= */
+#orderList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   ITEM CARD (NEW UI)
+========================= */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #fff;
+  padding: 12px;
+  border-radius: 5px;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   INFO (KIRI)
+========================= */
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.item-price {
+  font-size: 12px;
+  color: #777;
+}
+
+/* =========================
+   ACTION (KANAN)
+========================= */
+.item-action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* tombol + - */
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 5px;
+  background: #f0f0f0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.qty-btn:active {
+  transform: scale(0.9);
+}
+
+/* angka qty */
+.qty {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* tombol delete */
+.delete-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.delete-btn:active {
+  transform: scale(0.85);
+}
+
+/* =========================
+   TOTAL
+========================= */
+.total {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  margin: 12px 0;
+}
+
+/* =========================
+   BUTTON BAYAR
+========================= */
+.pay-btn {
+  width: 100%;
+  background: #D4AF37; /* 🔥 gold konsisten */
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.pay-btn:active {
+  transform: scale(0.97);
+}
+
+
+
+
+#toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #111;
+  color: #fff;
+
+  padding: 10px 14px;
+
+  border-radius: 999px; /* 🔥 ini bikin bulat kapsul */
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.25s ease;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
+  top: 40px;
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-text {
+  white-space: nowrap;
+}

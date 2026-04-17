@@ -1,0 +1,35 @@
+﻿id;nama;satuan;gramasi;harga;stokMinimal
+roti_balok;Roti Balok;Pcs;-;5000;28
+cokelat_cream;Cokelat Cream;Botol;-;5000;4
+vanilla_cream;Vanilla Cream;Botol;-;5000;4
+tiramisu_cream;Tiramisu Cream;Botol;-;5000;2
+greentea_cream;Greentea Cream;Botol;-;5000;2
+strawberry_cream;Strawberry Cream;Botol;-;5000;1
+choco_crunchy;Choco Crunchy;Toples;-;5000;2
+keju_cheddar;Keju Cheddar;Pcs;-;5000;8
+cookies_crumb;Cookies Crumb;Toples;-;5000;2
+caramel_crumb;Caramel Crumb;Toples;-;5000;1
+red_velvet_crumb;Red Velvet Crumb;Toples;-;5000;1
+matcha_crumb;Matcha Crumb;Toples;-;5000;1
+peanuts_crumb;Peanuts Crumb;Toples;-;5000;1
+chocolate_powder;Chocolate Powder;Pcs;-;5000;10
+milo_powder;Milo Powder;Pcs;-;5000;10
+vanilla_latte_powder;Vanilla Latte Powder;Pcs;-;5000;10
+cappuccino_powder;Cappuccino Powder;Pcs;-;5000;10
+taro_powder;Taro Powder;Pcs;-;5000;10
+red_velvet_powder;Red Velvet Powder;Pcs;-;5000;10
+greentea_powder;Greentea Powder;Pcs;-;5000;10
+blackcurrant_powder;Blackcurrant Powder;Pcs;-;5000;5
+lemon_tea_powder;Lemon Tea Powder;Pcs;-;5000;15
+kertas_cokelat;Kertas Cokelat;Pcs;-;5000;20
+kresek_roti;Kresek Roti;Pcs;-;5000;3
+tisu_garpu;Tisu Garpu;Pcs;-;5000;1
+kresek_1_cup;Kresek 1 Cup;Pcs;-;5000;2
+kresek_2_cup;Kresek 2 Cup;Pcs;-;5000;1
+sedotan_es;Sedotan Es;Pcs;-;5000;20
+kertas_struk;Kertas Struk;Roll;-;5000;5
+air_galon;Air Galon;Volume;-;5000;1
+gas_lpg;Gas LPG;Tabung;-;5000;1
+cup_ice;Cup Ice;Cup;-;5000;30
+minyak_crunchy;Minyak Crunchy;Botol;-;5000;1
+minyak_kelapa;Minyak Kelapa;Botol;-;5000;1

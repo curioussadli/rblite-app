@@ -1,0 +1,217 @@
+
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.riwayat-pesanan-page {
+  padding-top: 60px; /* space untuk topbar */
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.riwayat-pesanan-main {
+  flex: 1;
+  width: 100%;
+  padding: 8px 22px 100px; /* bawah untuk bottom nav */
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+.riwayat-pesanan-main::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* =========================
+   FILTER ICON BUTTON
+========================= */
+.filter-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 6px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+/* ICON */
+.filter-btn img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+.filter-btn:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ACTIVE (SETELAH PILIH TANGGAL) */
+.filter-btn.active img {
+  opacity: 1;
+  transform: scale(1.1);
+
+  /* kalau icon SVG bisa pakai warna */
+  filter: brightness(0) saturate(100%) invert(36%) sepia(90%) saturate(500%) hue-rotate(160deg);
+}
+
+.filter-wrapper {
+  position: relative;
+}
+
+.date-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+
+
+/* =========================
+   CARD
+========================= */
+.riwayat-item {
+  background: #fff;
+  border-radius: 5px;
+
+  padding: 16px 18px; /* jangan terlalu besar */
+  margin-bottom: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 🔥 ini bikin isi rata & enak */
+}
+
+
+/* =========================
+   HEADER
+========================= */
+.riwayat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kode {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
+/* =========================
+   DATE
+========================= */
+.riwayat-date {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.6;
+}
+
+
+/* =========================
+   ITEMS
+========================= */
+.riwayat-items {
+  margin-top: 10px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+.riwayat-total {
+  text-align: right;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+/* =========================
+   METODE
+========================= */
+.metode-select {
+  margin-top: 6px;
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+.delete-btn {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #999;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+
+#toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #111;
+  color: #fff;
+
+  padding: 10px 14px;
+
+  border-radius: 999px; /* 🔥 ini bikin bulat kapsul */
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.25s ease;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
+  top: 40px;
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-text {
+  white-space: nowrap;
+}

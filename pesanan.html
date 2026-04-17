@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <title>Pesanan</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pesanan.css">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div id="toast"></div>
+
+
+  <main class="phone-shell">
+    <section class="app-screen">
+
+      <!-- =========================
+           📦 MAIN CONTENT
+      ========================== -->
+      <section class="pesanan-main">
+
+        <!-- =========================
+            🧭 TOPBAR
+        ========================== -->
+        <div class="topbar">
+
+          <!-- 🔙 BACK BUTTON -->
+          <button class="topbar-btn" id="backBtn">
+            <img src="assets/icons/icon-back.svg" alt="back">
+          </button>
+
+          <!-- 🔥 TITLE -->
+          <h2 class="topbar-title">Pesanan</h2>
+
+        </div>
+
+
+
+
+
+
+
+        <!-- =========================
+             🛒 LIST PESANAN
+        ========================== -->
+        <div id="orderList"></div>
+        
+
+        
+
+        <!-- =========================
+             💰 TOTAL
+        ========================== -->
+        <div class="total">
+          <span>Total</span>
+          <strong>Rp <span id="totalHarga">0</span></strong>
+        </div>
+
+        <!-- =========================
+             💳 BUTTON BAYAR
+        ========================== -->
+
+<button id="payBtn" class="pay-btn">
+  Pesan Sekarang
+</button>
+        
+
+      </section>
+
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script type="module" src="js/pesanan.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <title>Riwayat Pesanan</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/riwayat-pesanan.css">
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div id="toast"></div>
+
+  <main class="phone-shell">
+    <section class="app-screen">
+
+
+      <!-- =========================
+           📦 PAGE WRAPPER (🔥 INI KUNCI)
+      ========================== -->
+      <div class="riwayat-pesanan-page">
+
+        <!-- =========================
+            🧭 TOPBAR
+        ========================== -->
+        <div class="topbar">
+          <h2 class="topbar-title">Riwayat</h2>
+
+         <div class="filter-wrapper">
+
+          <button id="filterBtn" class="filter-btn">
+            <img src="assets/icons/icon-filter.svg" alt="filter">
+          </button>
+
+          <input type="date" id="filterTanggal" class="date-overlay">
+
+        </div>
+        </div>
+
+
+        <!-- =========================
+           📦 MAIN CONTENT
+        ========================== -->
+        <section class="riwayat-pesanan-main">
+
+          <div class="riwayat-wrapper">
+
+            <!-- 🔥 LIST DARI FIREBASE -->
+            <div id="riwayatList" class="riwayat-list"></div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+
+      <!-- =========================
+      BOTTOM NAV
+      ========================= -->
+      <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-saldo.svg">
+          </div>
+          <span>Saldo</span>
+        </a>
+
+        <a href="stok.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-stok.svg">
+          </div>
+          <span>Stok</span>
+        </a>
+
+        <a href="menu.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-menu.svg">
+          </div>
+          <span>Menu</span>
+        </a>
+
+        <a href="riwayat-pesanan.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-pesanan.svg">
+          </div>
+          <span>Riwayat</span>
+        </a>
+
+        <a href="transaksi.html" class="nav-item">
+          <div class="nav-icon">
+            <img src="assets/icons/icon-laporan.svg">
+          </div>
+          <span>Transaksi</span>
+        </a>
+      </nav>
+
+    </section>
+  </main>
+
+  <!-- LOGIN CHECK -->
+  <script>
+    const isLogin = localStorage.getItem("login");
+    if (!isLogin) {
+      window.location.href = "index.html";
+    }
+  </script>
+
+  <!-- JS -->
+  <script type="module" src="js/riwayat-pesanan.js"></script>
+
+</body>
+</html>
